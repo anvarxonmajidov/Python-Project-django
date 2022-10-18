@@ -1,1 +1,1 @@
-# Python-Project-django
+# Python-Project-django yangi loyha 
