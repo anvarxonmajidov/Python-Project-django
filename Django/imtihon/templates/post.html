@@ -1,0 +1,23 @@
+{% extends 'basic.html' %}
+{% block mycontent %}
+<div class="conatiner">
+    <h1>All Post</h1>
+    <div class="row">
+        {% for post in object_list %}
+        <div class="col col-md-2">
+            <div class="card card-shadow m-3">
+                <img src="http://127.0.0.1:8000/media/{{post.img}}" alt="salom" class="card-img-top" width="25px">
+                <h2 class="text-center">{{post.title}}</h2>
+                <p class="m-1">{{post.sub_title}}</p>
+                <a href="{% url 'post_detail' post.pk %}" class="link-primary m-1">batafsil</a>
+<!--                <p>{{post.img}}</p>-->
+<!--                <p>{{post.avtor}}</p>-->
+<!--                <p>{{post.create_at}}</p>-->
+<!--                <p>{{post.updated_at}}</p>-->
+<!--                <p>{{post.views}}</p>-->
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

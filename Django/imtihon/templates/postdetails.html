@@ -1,0 +1,31 @@
+{% extends 'basic.html' %}
+{% block mycontent %}
+<div class="conatiner">
+    <div class="row">
+        <div class="card col-md-12 m-2">
+            <div class="row">
+                <div class="col-md-10 m-3">
+                    <img src="/media/{{post.img}}" class="d-block mx-auto" width="500">
+                    <h2 class="text-center">{{post.title}}</h2>
+                    <p class="m-1">{{post.sub_title}}</p>
+                    <p class="m-1">{{post.body}}</p>
+                    <hr>
+                    <p>Avtor: {{post.avtor}}</p>
+                    <hr>
+                    <p>created: {{post.create_at}}</p>
+                    <hr>
+                    <p>updated: {{post.updated_at}}</p>
+                    <hr>
+                    <p> {{post.views}}</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-2 mx-auto">
+                            <a href="{% url 'index' %}" class="btn btn-outline-success d-block w-20">Bosh sahifa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
